@@ -33,3 +33,9 @@ Every individual who registers with the Brazilian Federal Revenue Service's Indi
 
 ## Python
 
+<div>
+        <a href = "mailto:allmeida.lima@gmail.com"><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" target="_blank"></a>
+        <a href="https://www.linkedin.com/in/lalmeida-lima/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>   
+</div>
+
+##
