@@ -1,21 +1,24 @@
-def calcular_digito_verificador(numero, digitos=1):
-    lista_digitos = [int(digito) for digito in str(numero)]
-    digitos_verificadores = []
+def calculate_check_digit(number, digits=1):
+    # Convert the number to a list of digits
+    digit_list = [int(digit) for digit in number]
+    check_digits = []  # List to store calculated check digits
 
-    for _ in range(digitos):
-        soma = 0
-        peso = 2
-        for digito in reversed(lista_digitos):
-            soma += digito * peso
-            peso += 1
-        digito_verificador = (11 - soma % 11)
-        digitos_verificadores.append(digito_verificador)
-        lista_digitos.append(digito_verificador)
+    for _ in range(digits):
+        total = 0
+        weight = 2
+        # Calculate the weighted sum of digits in reverse order
+        for digit in reversed(digit_list):
+            total += digit * weight
+            weight += 1
+        # Calculate the check digit based on the total
+        check_digit = (11 - total % 11)
+        check_digits.append(check_digit)  # Store the check digit
+        digit_list.append(check_digit)    # Add the check digit to the list
 
-    return digitos_verificadores
+    return check_digits  # Return the list of calculated check digits
 
-# Exemplos
+# Examples
 cpf = "426240878"
-digitos_cpf = calcular_digito_verificador(cpf, digitos=2)
-cpf_formatado = f"{cpf}-{digitos_cpf[0]}{digitos_cpf[1]}"
-print(cpf_formatado)
+cpf_check_digits = calculate_check_digit(cpf, digits=2)
+formatted_cpf = f"{cpf}-{cpf_check_digits[0]}{cpf_check_digits[1]}"
+print(formatted_cpf)
